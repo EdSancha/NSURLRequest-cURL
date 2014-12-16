@@ -17,8 +17,7 @@
     if ([self.HTTPMethod isEqualToString:@"POST"]) {
         
         NSString *params = [[NSString alloc] initWithData:self.HTTPBody encoding:NSUTF8StringEncoding];
-        [string appendFormat:@"-d \"%@\" ",params];
-        [params release];
+        [string appendFormat:@"-d '%@' ",params];
         
     }
     
